@@ -1,0 +1,44 @@
+VocalSweet DSP test-suite
+=========================
+[PASS] Silence in -> silence out (all presets)                    peak output = 0.0 for all 9 presets (2 s stereo)
+[PASS] Very low level (-100 dBFS sine) stays stable & quiet       output RMS -97.5 dBFS (input -103.0 dBFS RMS)
+[PASS] 1 kHz sine -18 dBFS through default chain                  in -21.1 dBFS RMS -> out -19.3 dBFS RMS
+[PASS] Impulse response finite and decaying (EQ +/-9 dB)          energy after 0.5 s = 5.67e-83 of total
+[PASS] All modules off = transparent (delayed by latency only)    max |error| = 0.00e+00
+[PASS] Broadband pink noise through all presets                   max output peak -1.00 dBFS (ceiling -1.0) [Default]
+[PASS] White noise -9 dBFS RMS (Afrobeat Lead)                    output peak -1.00 dBFS
+[PASS] Mono == stereo(L) for identical L/R input                  max mono/stereo diff 0.00e+00, L/R diff 0.00e+00
+[PASS] Vocal Double widens a centred source                       L/R correlation 0.8524
+[PASS] Doubler on mono bus is stable                              mono peak -12.22 dBFS
+[PASS] 7 sample rates x 9 buffer sizes (22.05k-192k, 1-4096)      63 runs stable, peak <= ceiling
+[PASS] Block-size invariance (block 1 vs 4096)                    max difference 0.00e+00
+[PASS] Latency @ 44.1 kHz                                         measured 44 samples = 0.998 ms (reported 44)
+[PASS] Latency @ 48.0 kHz                                         measured 48 samples = 1.000 ms (reported 48)
+[PASS] Latency @ 96.0 kHz                                         measured 96 samples = 1.000 ms (reported 96)
+[PASS] HPF response (12/24 dB) matches design                     12dB: -21.0 dB @30Hz, 24dB: -41.9 dB @30Hz, max dev 0.000 dB
+[PASS] EQ + Tone response == EQ display curve                     300 Hz -6.57 dB, 3500 Hz +6.93 dB, 11000 Hz +5.17 dB, max dev 0.000 dB
+[PASS] Compressor GR: -6 dBFS sine, thr -20, 4:1                  measured GR 9.73 dB (static peak-based 10.5 dB), meter 9.74 dB, auto makeup 3.60 dB
+[PASS] Compressor below threshold: no gain reduction              GR 0.000 dB at -30 dBFS
+[PASS] Compressor attack time (10 ms setting)                     63% of final GR after ~15 ms
+[PASS] Saturation drive 0 adds no harmonics                       H2 -166.8 dB, H3 -171.3 dB
+[PASS] Saturation drive 60%: controlled harmonics                 H2 -33.8 dB, H3 -20.2 dB, level change -2.98 dB
+[PASS] Warmth adds even harmonics (asymmetry), DC blocked         H2 -22.8 dB, DC -1.0e-07
+[PASS] Saturation aliasing (ADAA) at 7 kHz, drive 100%            13 kHz alias component -62.1 dB rel. fundamental
+[PASS] De-esser reduces sibilant band                             7 kHz band level change -9.91 dB, GR meter 10.00 dB
+[PASS] De-esser leaves 300 Hz vowel tone untouched                level change 0.000 dB, GR 0.00 dB
+[PASS] Parameter min / max / 150 random combinations              152 runs finite, limiter ceiling respected
+[PASS] Macros at zero = detailed settings exactly                 effective == base for EQ, comp, de-ess, saturation
+[PASS] Dry/Wet 0% = original (latency aligned)                    max |error| 0.00e+00
+[PASS] Dry/Wet 50% = linear blend of dry and wet                  max |error| 7.45e-09
+[PASS] Bypass = bit-exact delayed input                           max |error| 0.00e+00
+[PASS] Bypass toggle is click-free (15 ms crossfade)              max sample step during switch 0.0115 (processed 0.0053, dry 0.0115)
+[PASS] NaN / Inf / 1e30 / denormal input injection                all output finite, recovers (tail RMS -21.5 dBFS), watchdog resets 0
+[PASS] +12 dBFS input, limiter on, ceiling -1 dBFS                output peak -1.000 dBFS
+[PASS] Limiter off: output passes level (no hidden clipping)      output peak 10.81 dBFS
+[PASS] Hot synthetic vocal (+3.5 dB over) stays under ceiling     output peak -6.370 dBFS
+[PASS] Abrupt preset / Sweeten jumps are smoothed (no clicks)     max sample step 0.0109 (limit 0.0324)
+[PASS] SWEETEN 0 -> 100: clearer, airier, more controlled         clarity +5.0 dB, air +4.7 dB, sibilance +0.1 dB, comp GR 3.0 -> 5.5 dB
+[PASS] 8 named presets are measurably distinct                    closest pair differs by 1.59 dB (Afrobeat Lead / Afrofusion Lead)
+[PASS] Performance: stereo 48 kHz, all modules + doubler          20.0 s audio in 0.499 s = 2.49% of one core (40x real-time)
+
+40 tests, 0 failed

@@ -1,0 +1,6 @@
+build*/
+dist/
+*.zip
+# Binaries and rendered audio are distributed as downloads, not kept in git
+binaries/
+audio-examples/*/

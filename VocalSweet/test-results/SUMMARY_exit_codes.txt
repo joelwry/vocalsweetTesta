@@ -1,0 +1,9 @@
+=== DSP tests
+dsp_exit=0
+=== Plugin tests
+plugin_exit=0
+=== pluginval Linux VST3 strictness 10
+pluginval_linux_exit=0
+=== pluginval Windows x64 VST3 under wine, strictness 10, GUI tests skipped
+pluginval_wine_exit=0
+ALLDONE

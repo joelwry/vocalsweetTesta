@@ -1,0 +1,15 @@
+file,preset,input_peak_dBFS,input_rms_dBFS,output_peak_dBFS,output_rms_dBFS
+vocal__default.wav,Default,-5.01,-22.53,-11.41,-23.67
+vocal__afrobeat_lead.wav,Afrobeat Lead,-5.01,-22.53,-10.95,-23.43
+vocal__afrofusion_lead.wav,Afrofusion Lead,-5.01,-22.53,-11.46,-23.41
+vocal__warm_intimate_vocal.wav,Warm Intimate Vocal,-5.01,-22.53,-11.03,-23.12
+vocal__bright_pop_vocal.wav,Bright Pop Vocal,-5.01,-22.53,-9.54,-23.20
+vocal__melodic_rap.wav,Melodic Rap,-5.01,-22.53,-12.08,-23.16
+vocal__smooth_background_vocal.wav,Smooth Background Vocal,-5.01,-22.53,-13.68,-25.66
+vocal__vocal_double.wav,Vocal Double,-5.01,-22.53,-12.37,-24.63
+vocal__natural_clean_vocal.wav,Natural Clean Vocal,-5.01,-22.53,-10.08,-23.93
+vocal__default_sweeten_0.wav,Default, Sweeten 0,-5.01,-22.53,-10.85,-23.30
+vocal__default_sweeten_50.wav,Default, Sweeten 50,-5.01,-22.53,-11.45,-23.76
+vocal__default_sweeten_100.wav,Default, Sweeten 100,-5.01,-22.53,-11.63,-24.17
+sweep__afrobeat_lead.wav,Afrobeat Lead,-12.04,-15.05,-11.10,-18.68
+pink__bright_pop_vocal.wav,Bright Pop Vocal,6.26,-7.58,-1.00,-18.62

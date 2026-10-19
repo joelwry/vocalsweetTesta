@@ -1,0 +1,36 @@
+Started validating: Z:\tmp\wtest\VocalSweet.vst3
+Random seed: 0x458e4db
+Validation started
+Strictness level: 10
+-----------------------------------------------------------------
+Starting tests in: pluginval / Scan for plugins located in: Z:\tmp\wtest\VocalSweet.vst3...
+Num plugins found: 1
+
+Testing plugin: VST3-VocalSweet-8e10272a-1cd6ffc7
+VocalSweet Audio: VocalSweet v1.0.0
+Completed tests in pluginval / Scan for plugins located in: Z:\tmp\wtest\VocalSweet.vst3
+-----------------------------------------------------------------
+Starting tests in: pluginval / Open plugin (cold)...
+Completed tests in pluginval / Open plugin (cold)
+-----------------------------------------------------------------
+Starting tests in: pluginval / Open plugin (warm)...
+Running tests 1 times
+Completed tests in pluginval / Open plugin (warm)
+-----------------------------------------------------------------
+Starting tests in: pluginval / Plugin info...
+
+Plugin name: VocalSweet
+Alternative names: VocalSweet
+SupportsDoublePrecision: no
+Reported latency: 0
+Reported taillength: 0.05
+Completed tests in pluginval / Plugin info
+-----------------------------------------------------------------
+Starting tests in: pluginval / Plugin programs...
+Num programs: 9
+All program names checked
+
+Changing program
+Completed tests in pluginval / Plugin programs
+-----------------------------------------------------------------
+Starting tests in: pluginval / Editor...

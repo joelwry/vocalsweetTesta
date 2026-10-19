@@ -1,0 +1,20 @@
+VocalSweet plugin test-suite
+============================
+[PASS] All parameters registered with host-visible IDs            41 / 41 parameters
+[PASS] Parameter defaults match specification                     all defaults verified
+[PASS] Parameter value text for automation lanes                  80 Hz, -18.0 dB
+[PASS] Bus layouts: mono & stereo accepted, others rejected       mono->mono, stereo->stereo
+[PASS] Host bypass parameter exposed                              getBypassParameter() == 'bypass'
+[PASS] processBlock: 3 rates x 3 blocks x mono/stereo             finite, peak <= -1 dBFS, latency = 1 ms reported to host
+[PASS] Randomly varying block sizes (1..1024)                     172 processBlock calls, all finite
+[PASS] NaN / Inf from host buffer sanitised                       output finite
+[PASS] Host bypass (processBlockBypassed) = delayed dry           max |error| 0.00e+00
+[PASS] State save -> restore (all parameters)                     1637 bytes, 0 mismatches, preset 'Warm Intimate Vocal'
+[PASS] Corrupt / empty state ignored safely                       defaults retained
+[PASS] Factory presets load exact values via host programs        Default, Afrobeat Lead, Afrofusion Lead, Warm Intimate Vocal, Bright Pop Vocal, Melodic Rap, Smooth Background Vocal, Vocal Double, Natural Clean Vocal
+[PASS] User preset save / load / delete                           saved to /root/.config/VocalSweet/Presets/zz UnitTest Preset.vspreset, warmth restored to 88.0
+[PASS] Fast host automation of macros is click-free               max sample step 0.0078 (limit 0.0295)
+[PASS] Editor opens                                               editor size 1080 x 700
+[PASS] Editor snapshots rendered                                  PNG files in /home/user/vocalsweetTesta/VocalSweet/test-results/editor-snapshots
+
+16 tests, 0 failed
