@@ -784,11 +784,11 @@ void AssistPage::Tiles::paint (juce::Graphics& g)
         const auto& r = rep->raw;
         const auto& p = rep->predicted;
         tl.push_back ({ "LOUDNESS", f1 (r.integratedLufs) + " LUFS", "after plan " + f1 (p.integratedLufs), colours::gold });
-        tl.push_back ({ "LEVEL RANGE", f1 (rep->current.levelRange) + " dB", "plan " + f1 (p.levelRange) + " / target " + juce::String (rep->target.levelRangeMax, 0), colours::coral });
+        tl.push_back ({ "LEVEL RANGE", f1 (rep->current.levelRange) + " dB", "plan " + f1 (p.levelRange) + " / target " + juce::String (rep->target.levelRangeMax, 1), colours::coral });
         tl.push_back ({ "TRUE PEAK", f1 (r.truePeakDb) + " dBTP", "plan " + f1 (p.truePeakDb) + " dBTP", r.truePeakDb > -1 ? colours::meterHigh : colours::cyan });
         tl.push_back ({ "CREST / PLR", f1 (r.crestDb) + " dB", "PLR " + f1 (r.plrDb) + " dB", colours::violet });
         tl.push_back ({ "SIBILANCE", r.sibilance.events > 0 ? juce::String (rep->current.sibilance.peakRelBodyDb, 1) + " dB" : juce::String ("none"),
-                        juce::String (r.sibilance.eventsPerMinute, 0) + "/min, plan " + (p.sibilance.events > 0 ? juce::String (p.sibilance.peakRelBodyDb, 1) : juce::String ("--")), colours::coral });
+                        juce::String (juce::roundToInt (r.sibilance.eventsPerMinute)) + "/min, plan " + (p.sibilance.events > 0 ? juce::String (p.sibilance.peakRelBodyDb, 1) : juce::String ("--")), colours::coral });
         tl.push_back ({ "PITCH (F0)", r.pitch.voicedFrames > 20 ? juce::String (juce::roundToInt (r.pitch.p5)) + "-" + juce::String (juce::roundToInt (r.pitch.p95)) + " Hz" : juce::String ("--"),
                         juce::String (juce::roundToInt (r.pitch.voicedFraction * 100)) + "% voiced", colours::emerald });
         tl.push_back ({ "STEREO", r.stereo ? juce::String (r.correlation, 2) : juce::String ("mono"), r.stereo ? "correlation" : "1 channel", colours::cyan });

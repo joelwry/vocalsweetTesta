@@ -7,7 +7,7 @@ juce::String SwitaxVoiceAudioProcessor::formatValue (const sx::ParamDef& d, floa
     if (unit == "Hz")
         return v >= 1000.0f ? juce::String (v / 1000.0f, v >= 10000.0f ? 1 : 2) + " kHz"
                             : juce::String (juce::roundToInt (v)) + " Hz";
-    if (unit == "dB") return (v > 0.05f ? "+" : "") + juce::String (v, 1) + " dB";
+    if (unit == "dB") return std::abs (v) < 0.05f ? juce::String ("0.0 dB") : (v > 0.0f ? "+" : "") + juce::String (v, 1) + " dB";
     if (unit == "ms") return juce::String (v, v < 10.0f ? 1 : 0) + " ms";
     if (unit == ":1") return juce::String (v, 1) + ":1";
     if (unit == "%")  return juce::String (juce::roundToInt (v)) + "%";

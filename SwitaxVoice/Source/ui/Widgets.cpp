@@ -247,11 +247,13 @@ void EqDisplay::tick()
         last = values; lastRate = rate; curveDirty = false;
         curve.clear();
         auto a = plot();
+        bool started = false;   // (Path::isEmpty() stays true for a perfectly flat line)
         for (float x = a.getX(); x <= a.getRight(); x += 2.0f)
         {
             const float f = 20.0f * std::pow (1000.0f, (x - a.getX()) / a.getWidth());
             const float y = yFor ((float) sx::dsp::Chain::responseDb (values, rate, f));
-            curve.isEmpty() ? curve.startNewSubPath (x, y) : curve.lineTo (x, y);
+            started ? curve.lineTo (x, y) : curve.startNewSubPath (x, y);
+            started = true;
         }
     }
     proc.analysis.getDisplaySpectra (specIn, specOut);
@@ -387,7 +389,7 @@ void ModuleCard::paint (juce::Graphics& g)
     g.fillRoundedRectangle (juce::Rectangle<float> (12.0f, 12.0f, 3.0f, 12.0f), 1.5f);
     g.setFont (font (11.5f, 3));
     g.setColour (on ? colours::text : colours::textDim);
-    g.drawText (title.toUpperCase(), juce::Rectangle<float> (20.0f, 8.0f, r.getWidth() - 70.0f, 20.0f), juce::Justification::centredLeft);
+    g.drawFittedText (title.toUpperCase(), juce::Rectangle<float> (20.0f, 8.0f, r.getWidth() - 62.0f, 20.0f).toNearestInt(), juce::Justification::centredLeft, 1, 0.8f);
 }
 
 void ModuleCard::resized()

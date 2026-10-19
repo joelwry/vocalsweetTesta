@@ -332,7 +332,7 @@ void AnalysisEngine::loadReference (const juce::File& f)
             return;
         }
         const int chs = (int) juce::jmin (2u, reader->numChannels);
-        const auto len = (int) juce::jmin<juce::int64> (reader->lengthInSamples, (juce::int64) (reader->sampleRate * 180.0));
+        const auto len = (int) std::min<juce::int64> (reader->lengthInSamples, (juce::int64) (reader->sampleRate * 180.0));
         juce::AudioBuffer<float> buf (chs, len);
         reader->read (&buf, 0, len, 0, true, chs > 1);
         Buffer b;

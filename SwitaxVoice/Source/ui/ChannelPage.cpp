@@ -5,11 +5,11 @@ namespace sx::ui
 {
 ChannelPage::ChannelPage (SwitaxVoiceAudioProcessor& p)
     : eq (p),
-      hpf (p.apvts, "High-Pass", "hpfOn", 1, colours::cyan),
+      hpf (p.apvts, "HPF", "hpfOn", 1, colours::cyan),
       eqCard (p.apvts, "Tone EQ", "eqOn", 5, colours::gold),
       comp (p.apvts, "Compressor", "compOn", 3, colours::coral),
       deess (p.apvts, "De-Esser", "deessOn", 3, colours::violet),
-      sat (p.apvts, "Saturate", "satOn", 1, colours::coral),
+      sat (p.apvts, "Sat", "satOn", 1, colours::coral),
       excite (p.apvts, "Exciter", "exciteOn", 2, colours::gold),
       dbl (p.apvts, "Doubler", "doubleOn", 2, colours::cyan),
       output (p.apvts, "Output", "", 4, colours::emerald)

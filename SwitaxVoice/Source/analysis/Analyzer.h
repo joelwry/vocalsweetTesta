@@ -173,10 +173,21 @@ public:
         for (size_t w = 0; w < p.sDb.size(); ++w)
             if (act.isActiveAt ((long long) w * m.window)) active.push_back (std::max (p.sDb[w], p.bDb[w]));
         const double loud = active.empty() ? -120.0 : percentileOf (active, 0.95);
+        std::vector<double> sAct, ratio;
+        for (size_t w = 0; w < p.sDb.size(); ++w)
+            if (act.isActiveAt ((long long) w * m.window)) { sAct.push_back (p.sDb[w]); ratio.push_back (p.sDb[w] - p.bDb[w]); }
+        const double sMedian = sAct.empty() ? -120.0 : percentileOf (sAct, 0.5);
+        const double ratioMedian = ratio.empty() ? 0.0 : percentileOf (ratio, 0.5);
         bool prev = false;
         for (size_t w = 0; w < p.sDb.size(); ++w)
         {
-            const bool e = act.isActiveAt ((long long) w * m.window) && p.sDb[w] - p.bDb[w] > 0.0f && p.sDb[w] > loud - 30.0;
+            // a sibilant is a burst in the 4.5-11 kHz band: well above that band's typical level,
+            // not far below the body at the same moment, and not buried in noise. Using the band's
+            // own median (rather than only S > B) keeps detection stable when the body is boosted.
+            // Detection is relative to the signal's own median S-B ratio, so it is invariant to
+            // static EQ and gain: the same moments count as sibilant before and after an EQ change.
+            const bool e = act.isActiveAt ((long long) w * m.window) && (p.sDb[w] - p.bDb[w]) > ratioMedian + 15.0
+                           && p.sDb[w] > sMedian + 6.0 && p.sDb[w] > loud - 35.0;
             m.event[w] = e;
             if (e && ! prev) ++m.numEvents;
             prev = e;
@@ -382,7 +393,19 @@ inline Measurements analyse (const Buffer& buf, double sr, const AnalysisOptions
     const auto mono = monoMix (buf);
 
     Activity ownAct;
-    if (opt.activity == nullptr) ownAct = detectActivity (mono, sr);
+    if (opt.activity == nullptr)
+    {
+        // activity from the mean channel power, not the mono sum: an out-of-phase stereo
+        // signal sums to silence but is certainly not silent
+        std::vector<float> level (n);
+        for (size_t i = 0; i < n; ++i)
+        {
+            double e = 0.0;
+            for (int c = 0; c < m.channels; ++c) e += (double) buf[(size_t) c][i] * buf[(size_t) c][i];
+            level[i] = (float) std::sqrt (e / m.channels);
+        }
+        ownAct = detectActivity (level, sr);
+    }
     const Activity& act = opt.activity != nullptr ? *opt.activity : ownAct;
     if (activityOut != nullptr) *activityOut = act;
     m.activeSeconds = act.activeSeconds();
