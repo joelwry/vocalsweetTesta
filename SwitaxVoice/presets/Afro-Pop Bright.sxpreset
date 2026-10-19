@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SwitaxVoicePreset name="Afro-Pop Bright" version="1" inputGain="0.0" hpfOn="1.0"
+                   hpfFreq="100.0" hpfSlope="1.0" eqOn="1.0" lowFreq="320.0" lowGain="-2.5"
+                   boxFreq="850.0" boxGain="-2.0" harshFreq="3200.0" harshGain="0.0"
+                   presFreq="4000.0" presGain="3.0" airFreq="12000.0" airGain="4.5"
+                   compOn="1.0" compThresh="-25.0" compRatio="3.5" compAttack="5.0"
+                   compRelease="80.0" compMakeup="0.0" compAuto="1.0" deessOn="1.0"
+                   deessFreq="7500.0" deessThresh="-35.0" deessRange="9.0" satOn="1.0"
+                   satDrive="15.0" exciteOn="1.0" exciteFreq="6000.0" exciteAmount="20.0"
+                   doubleOn="0.0" doubleAmount="40.0" doubleWidth="70.0" outputGain="0.0"
+                   limiterOn="1.0" ceiling="-1.0" mix="100.0"/>

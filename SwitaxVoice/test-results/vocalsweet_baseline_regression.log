@@ -1,0 +1,288 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Checking for module 'alsa'
+--   Found alsa, version 1.2.11
+-- Checking for modules 'freetype2;fontconfig'
+--   Found freetype2, version 26.1.20
+--   Found fontconfig, version 2.15.0
+-- Checking for module 'gl'
+--   Found gl, version 1.2
+-- Checking for module 'libcurl'
+--   Package 'libcurl', required by 'virtual:world', not found
+-- Checking for modules 'webkit2gtk-4.0;gtk+-x11-3.0'
+--   Package 'webkit2gtk-4.0', required by 'virtual:world', not found
+--   Package 'gtk+-x11-3.0', required by 'virtual:world', not found
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Testing juceaide
+-- Finished setting up juceaide
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done (68.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /opt/build/vs-linux
+[0/2] Re-checking globbed directories...
+[1/78] Generating juce_binarydata_VocalSweetBinaryData/JuceLibraryCode/BinaryData1.cpp, juce_binarydata_VocalSweetBinaryData/JuceLibraryCode/BinaryData2.cpp, juce_binarydata_VocalSweetBinaryData/JuceLibraryCode/BinaryData3.cpp, juce_binarydata_VocalSweetBinaryData/JuceLibraryCode/BinaryData.h
+[2/78] Building CXX object CMakeFiles/VocalSweetBinaryData.dir/juce_binarydata_VocalSweetBinaryData/JuceLibraryCode/BinaryData1.cpp.o
+[3/78] Building CXX object CMakeFiles/VocalSweetBinaryData.dir/juce_binarydata_VocalSweetBinaryData/JuceLibraryCode/BinaryData2.cpp.o
+[4/78] Building CXX object CMakeFiles/VocalSweetBinaryData.dir/juce_binarydata_VocalSweetBinaryData/JuceLibraryCode/BinaryData3.cpp.o
+[5/78] Linking CXX static library libVocalSweetBinaryData.a
+[6/78] Generating VocalSweet_artefacts/JuceLibraryCode/JuceHeader.h
+[7/78] Building CXX object CMakeFiles/VocalSweetRender.dir/tests/RenderPresets.cpp.o
+[8/78] Building CXX object CMakeFiles/VocalSweetDspTests.dir/tests/DspTests.cpp.o
+[9/78] Building CXX object CMakeFiles/juce_vst3_helper.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp.o
+[10/78] Building CXX object CMakeFiles/VocalSweet.dir/Source/PluginProcessor.cpp.o
+In file included from /home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:12,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/PluginProcessor.h:5,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/PluginProcessor.cpp:1:
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/Tone.h: In member function 'void vs::dsp::AdaaTanh::setBias(float)':
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/Tone.h:20:24: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+   20 |         if ((double) b == bias) return;
+      |             ~~~~~~~~~~~^~~~~~~
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h: In member function 'void vs::dsp::VocalChain::prepare(double, int)':
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:43:18: warning: conversion to 'std::array<vs::dsp::Smoother, 11>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   43 |             fast[f].prepareLinear (sampleRate, 20.0);   // on/off crossfades: exact 20 ms ramps
+      |                  ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h: In member function 'void vs::dsp::VocalChain::applyTargets(bool)':
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:251:56: warning: conversion to 'std::array<vs::dsp::Smoother, 25>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  251 |         for (int i = 0; i < kNumSlow; ++i) snap ? slow[i].snap (slowT[i]) : slow[i].setTarget (slowT[i]);
+      |                                                        ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:251:82: warning: conversion to 'std::array<vs::dsp::Smoother, 25>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  251 |         for (int i = 0; i < kNumSlow; ++i) snap ? slow[i].snap (slowT[i]) : slow[i].setTarget (slowT[i]);
+      |                                                                                  ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:252:56: warning: conversion to 'std::array<vs::dsp::Smoother, 11>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  252 |         for (int i = 0; i < kNumFast; ++i) snap ? fast[i].snap (fastT[i]) : fast[i].setTarget (fastT[i]);
+      |                                                        ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:252:82: warning: conversion to 'std::array<vs::dsp::Smoother, 11>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  252 |         for (int i = 0; i < kNumFast; ++i) snap ? fast[i].snap (fastT[i]) : fast[i].setTarget (fastT[i]);
+      |                                                                                  ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h: In member function 'void vs::dsp::VocalChain::updateCoefficients(bool)':
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:262:25: warning: conversion to 'std::array<vs::dsp::Smoother, 25>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  262 |             v[i] = slow[i].current;
+      |                         ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:263:40: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+  263 |             changed[i] = force || v[i] != lastSlow[i];
+      |                                   ~~~~~^~~~~~~~~~~~~~
+In file included from /opt/src/juce-8.0.4/modules/juce_audio_processors/juce_audio_processors.h:154,
+                 from /opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client.h:65,
+                 from /opt/build/vs-linux/VocalSweet_artefacts/JuceLibraryCode/JuceHeader.h:14,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/PluginProcessor.h:3:
+/opt/src/juce-8.0.4/modules/juce_audio_processors/processors/juce_AudioProcessor.h: At global scope:
+/opt/src/juce-8.0.4/modules/juce_audio_processors/processors/juce_AudioProcessor.h:313:18: warning: 'virtual void juce::AudioProcessor::processBlockBypassed(juce::AudioBuffer<double>&, juce::MidiBuffer&)' was hidden [-Woverloaded-virtual=]
+  313 |     virtual void processBlockBypassed (AudioBuffer<double>& buffer,
+      |                  ^~~~~~~~~~~~~~~~~~~~
+/home/user/vocalsweetTesta/VocalSweet/Source/PluginProcessor.h:60:10: note:   by 'virtual void VocalSweetAudioProcessor::processBlockBypassed(juce::AudioBuffer<float>&, juce::MidiBuffer&)'
+   60 |     void processBlockBypassed (juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
+      |          ^~~~~~~~~~~~~~~~~~~~
+[11/78] Building CXX object CMakeFiles/VocalSweet.dir/Source/PluginEditor.cpp.o
+In file included from /home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:12,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/PluginProcessor.h:5,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/PluginEditor.h:3,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/PluginEditor.cpp:1:
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/Tone.h: In member function 'void vs::dsp::AdaaTanh::setBias(float)':
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/Tone.h:20:24: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+   20 |         if ((double) b == bias) return;
+      |             ~~~~~~~~~~~^~~~~~~
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h: In member function 'void vs::dsp::VocalChain::prepare(double, int)':
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:43:18: warning: conversion to 'std::array<vs::dsp::Smoother, 11>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   43 |             fast[f].prepareLinear (sampleRate, 20.0);   // on/off crossfades: exact 20 ms ramps
+      |                  ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h: In member function 'void vs::dsp::VocalChain::applyTargets(bool)':
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:251:56: warning: conversion to 'std::array<vs::dsp::Smoother, 25>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  251 |         for (int i = 0; i < kNumSlow; ++i) snap ? slow[i].snap (slowT[i]) : slow[i].setTarget (slowT[i]);
+      |                                                        ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:251:82: warning: conversion to 'std::array<vs::dsp::Smoother, 25>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  251 |         for (int i = 0; i < kNumSlow; ++i) snap ? slow[i].snap (slowT[i]) : slow[i].setTarget (slowT[i]);
+      |                                                                                  ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:252:56: warning: conversion to 'std::array<vs::dsp::Smoother, 11>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  252 |         for (int i = 0; i < kNumFast; ++i) snap ? fast[i].snap (fastT[i]) : fast[i].setTarget (fastT[i]);
+      |                                                        ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:252:82: warning: conversion to 'std::array<vs::dsp::Smoother, 11>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  252 |         for (int i = 0; i < kNumFast; ++i) snap ? fast[i].snap (fastT[i]) : fast[i].setTarget (fastT[i]);
+      |                                                                                  ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h: In member function 'void vs::dsp::VocalChain::updateCoefficients(bool)':
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:262:25: warning: conversion to 'std::array<vs::dsp::Smoother, 25>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  262 |             v[i] = slow[i].current;
+      |                         ^
+/home/user/vocalsweetTesta/VocalSweet/Source/dsp/VocalChain.h:263:40: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+  263 |             changed[i] = force || v[i] != lastSlow[i];
+      |                                   ~~~~~^~~~~~~~~~~~~~
+In file included from /opt/src/juce-8.0.4/modules/juce_audio_processors/juce_audio_processors.h:154,
+                 from /opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client.h:65,
+                 from /opt/build/vs-linux/VocalSweet_artefacts/JuceLibraryCode/JuceHeader.h:14,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/PluginProcessor.h:3:
+/opt/src/juce-8.0.4/modules/juce_audio_processors/processors/juce_AudioProcessor.h: At global scope:
+/opt/src/juce-8.0.4/modules/juce_audio_processors/processors/juce_AudioProcessor.h:313:18: warning: 'virtual void juce::AudioProcessor::processBlockBypassed(juce::AudioBuffer<double>&, juce::MidiBuffer&)' was hidden [-Woverloaded-virtual=]
+  313 |     virtual void processBlockBypassed (AudioBuffer<double>& buffer,
+      |                  ^~~~~~~~~~~~~~~~~~~~
+/home/user/vocalsweetTesta/VocalSweet/Source/PluginProcessor.h:60:10: note:   by 'virtual void VocalSweetAudioProcessor::processBlockBypassed(juce::AudioBuffer<float>&, juce::MidiBuffer&)'
+   60 |     void processBlockBypassed (juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
+      |          ^~~~~~~~~~~~~~~~~~~~
+[12/78] Building CXX object CMakeFiles/VocalSweet.dir/Source/PresetManager.cpp.o
+[13/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
+[14/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
+[15/78] Building CXX object CMakeFiles/VocalSweet.dir/Source/ui/LookAndFeel.cpp.o
+[16/78] Building CXX object CMakeFiles/VocalSweet.dir/Source/ui/Widgets.cpp.o
+In file included from /home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h:12,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.h:4,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp:1:
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/Tone.h: In member function 'void vs::dsp::AdaaTanh::setBias(float)':
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/Tone.h:20:24: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+   20 |         if ((double) b == bias) return;
+      |             ~~~~~~~~~~~^~~~~~~
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h: In member function 'void vs::dsp::VocalChain::prepare(double, int)':
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h:43:18: warning: conversion to 'std::array<vs::dsp::Smoother, 11>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   43 |             fast[f].prepareLinear (sampleRate, 20.0);   // on/off crossfades: exact 20 ms ramps
+      |                  ^
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h: In member function 'void vs::dsp::VocalChain::applyTargets(bool)':
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h:251:56: warning: conversion to 'std::array<vs::dsp::Smoother, 25>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  251 |         for (int i = 0; i < kNumSlow; ++i) snap ? slow[i].snap (slowT[i]) : slow[i].setTarget (slowT[i]);
+      |                                                        ^
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h:251:82: warning: conversion to 'std::array<vs::dsp::Smoother, 25>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  251 |         for (int i = 0; i < kNumSlow; ++i) snap ? slow[i].snap (slowT[i]) : slow[i].setTarget (slowT[i]);
+      |                                                                                  ^
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h:252:56: warning: conversion to 'std::array<vs::dsp::Smoother, 11>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  252 |         for (int i = 0; i < kNumFast; ++i) snap ? fast[i].snap (fastT[i]) : fast[i].setTarget (fastT[i]);
+      |                                                        ^
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h:252:82: warning: conversion to 'std::array<vs::dsp::Smoother, 11>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  252 |         for (int i = 0; i < kNumFast; ++i) snap ? fast[i].snap (fastT[i]) : fast[i].setTarget (fastT[i]);
+      |                                                                                  ^
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h: In member function 'void vs::dsp::VocalChain::updateCoefficients(bool)':
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h:262:25: warning: conversion to 'std::array<vs::dsp::Smoother, 25>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  262 |             v[i] = slow[i].current;
+      |                         ^
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../dsp/VocalChain.h:263:40: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+  263 |             changed[i] = force || v[i] != lastSlow[i];
+      |                                   ~~~~~^~~~~~~~~~~~~~
+In file included from /opt/src/juce-8.0.4/modules/juce_audio_processors/juce_audio_processors.h:154,
+                 from /opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client.h:65,
+                 from /opt/build/vs-linux/VocalSweet_artefacts/JuceLibraryCode/JuceHeader.h:14,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/ui/Theme.h:3,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/ui/LookAndFeel.h:3,
+                 from /home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.h:3:
+/opt/src/juce-8.0.4/modules/juce_audio_processors/processors/juce_AudioProcessor.h: At global scope:
+/opt/src/juce-8.0.4/modules/juce_audio_processors/processors/juce_AudioProcessor.h:313:18: warning: 'virtual void juce::AudioProcessor::processBlockBypassed(juce::AudioBuffer<double>&, juce::MidiBuffer&)' was hidden [-Woverloaded-virtual=]
+  313 |     virtual void processBlockBypassed (AudioBuffer<double>& buffer,
+      |                  ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp:2:
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/../PluginProcessor.h:60:10: note:   by 'virtual void VocalSweetAudioProcessor::processBlockBypassed(juce::AudioBuffer<float>&, juce::MidiBuffer&)'
+   60 |     void processBlockBypassed (juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
+      |          ^~~~~~~~~~~~~~~~~~~~
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp: In member function 'virtual void vs::ui::LevelMeter::paint(juce::Graphics&)':
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp:133:25: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+  133 |         g.setColour (db == 0.0f ? colours::textDim : colours::textFaint);
+      |                      ~~~^~~~~~~
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp: In member function 'void vs::ui::EqDisplay::tick()':
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp:196:38: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+  196 |     if (values != lastValues || rate != lastRate || curveDirty)
+      |                                 ~~~~~^~~~~~~~~~~
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp: In member function 'virtual void vs::ui::EqDisplay::paint(juce::Graphics&)':
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp:270:25: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+  270 |         g.setColour (db == 0.0f ? colours::line : colours::lineSoft);
+      |                      ~~~^~~~~~~
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp: In member function 'virtual void vs::ui::GainReductionDisplay::paint(juce::Graphics&)':
+/home/user/vocalsweetTesta/VocalSweet/Source/ui/Widgets.cpp:382:24: warning: comparing floating-point with '==' or '!=' is unsafe [-Wfloat-equal]
+  382 |         g.drawText (db == 0.0f ? "0" : "-" + juce::String ((int) db), juce::Rectangle<float> (plot.getX() - 22.0f, yFor (db) - 6.0f, 18.0f, 12.0f),
+      |                     ~~~^~~~~~~
+[17/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_gui_extra/juce_gui_extra.cpp.o
+[18/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_audio_processors/juce_audio_processors.cpp.o
+[19/78] Building C object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+[20/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_events/juce_events.cpp.o
+[21/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_graphics/juce_graphics.cpp.o
+[22/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_core/juce_core_CompilationTime.cpp.o
+[23/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_core/juce_core.cpp.o
+[24/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_data_structures/juce_data_structures.cpp.o
+[25/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_audio_basics/juce_audio_basics.cpp.o
+[26/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+[27/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_audio_utils/juce_audio_utils.cpp.o
+[28/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_gui_basics/juce_gui_basics.cpp.o
+In file included from /opt/src/juce-8.0.4/modules/juce_core/system/juce_StandardHeader.h:94,
+                 from /opt/src/juce-8.0.4/modules/juce_core/juce_core.h:215,
+                 from /opt/src/juce-8.0.4/modules/juce_graphics/juce_graphics.h:67,
+                 from /opt/src/juce-8.0.4/modules/juce_gui_basics/juce_gui_basics.h:68,
+                 from /opt/src/juce-8.0.4/modules/juce_gui_basics/juce_gui_basics.cpp:55:
+/opt/src/juce-8.0.4/modules/juce_core/system/juce_PlatformDefs.h:286:38: note: '#pragma message: This version of JUCE does not use the splash screen, the flag JUCE_DISPLAY_SPLASH_SCREEN is ignored'
+  286 |  #define JUCE_COMPILER_WARNING(msg)  _Pragma (JUCE_STRINGIFY (message (msg)))
+      |                                      ^~~~~~~
+/opt/src/juce-8.0.4/modules/juce_gui_basics/juce_gui_basics.cpp:61:2: note: in expansion of macro 'JUCE_COMPILER_WARNING'
+   61 |  JUCE_COMPILER_WARNING ("This version of JUCE does not use the splash screen, the flag JUCE_DISPLAY_SPLASH_SCREEN is ignored")
+      |  ^~~~~~~~~~~~~~~~~~~~~
+[29/78] Building CXX object CMakeFiles/VocalSweet_Standalone.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.cpp.o
+[30/78] Building CXX object CMakeFiles/VocalSweet_Standalone.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+[31/78] Building CXX object CMakeFiles/VocalSweet_Standalone.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+[32/78] Building CXX object CMakeFiles/VocalSweet_Standalone.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.cpp.o
+[33/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_audio_devices/juce_audio_devices.cpp.o
+[34/78] Building CXX object CMakeFiles/VocalSweet_Standalone.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+[35/78] Building CXX object CMakeFiles/VocalSweet_Standalone.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.cpp.o
+[36/78] Building CXX object CMakeFiles/VocalSweet_Standalone.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp.o
+[37/78] Linking CXX executable juce_vst3_helper
+[38/78] Building CXX object CMakeFiles/VocalSweet_VST3.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.cpp.o
+[39/78] Building CXX object CMakeFiles/VocalSweet_VST3.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+[40/78] Building CXX object CMakeFiles/VocalSweet_VST3.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+[41/78] Building CXX object CMakeFiles/VocalSweet_VST3.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.cpp.o
+[42/78] Building CXX object CMakeFiles/VocalSweet_VST3.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+[43/78] Building CXX object CMakeFiles/VocalSweet_VST3.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+[44/78] Building CXX object CMakeFiles/VocalSweet_VST3.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.cpp.o
+[45/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_audio_formats/juce_audio_formats.cpp.o
+[46/78] Linking CXX executable VocalSweetDspTests
+[47/78] Linking CXX executable VocalSweetRender
+[48/78] Generating VocalSweetPluginTests_artefacts/JuceLibraryCode/JuceHeader.h
+[49/78] Building CXX object CMakeFiles/VocalSweet.dir/opt/src/juce-8.0.4/modules/juce_dsp/juce_dsp.cpp.o
+[50/78] Linking CXX static library VocalSweet_artefacts/Release/libVocalSweet_SharedCode.a
+[51/78] Building CXX object CMakeFiles/VocalSweet_Standalone.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+[52/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/tests/PluginTests.cpp.o
+[53/78] Building CXX object CMakeFiles/VocalSweet_VST3.dir/opt/src/juce-8.0.4/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp.o
+[54/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/Source/PluginProcessor.cpp.o
+[55/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/Source/PluginEditor.cpp.o
+[56/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/Source/PresetManager.cpp.o
+[57/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/Source/ui/LookAndFeel.cpp.o
+[58/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/Source/ui/Widgets.cpp.o
+[59/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_audio_utils/juce_audio_utils.cpp.o
+[60/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
+[61/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
+[62/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_audio_processors/juce_audio_processors.cpp.o
+[63/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_gui_extra/juce_gui_extra.cpp.o
+[64/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_graphics/juce_graphics.cpp.o
+[65/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_gui_basics/juce_gui_basics.cpp.o
+[66/78] Building C object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+[67/78] Linking CXX shared module VocalSweet_artefacts/Release/VST3/VocalSweet.vst3/Contents/x86_64-linux/VocalSweet.so
+lto-wrapper: warning: using serial compilation of 69 LTRANS jobs
+lto-wrapper: note: see the '-flto' option documentation for more information
+removing moduleinfo.json
+creating /opt/build/vs-linux/VocalSweet_artefacts/Release/VST3/VocalSweet.vst3/Contents/Resources/moduleinfo.json
+[68/78] Linking CXX executable VocalSweet_artefacts/Release/Standalone/VocalSweet
+lto-wrapper: warning: using serial compilation of 75 LTRANS jobs
+lto-wrapper: note: see the '-flto' option documentation for more information
+[69/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_core/juce_core_CompilationTime.cpp.o
+[70/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_events/juce_events.cpp.o
+[71/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_data_structures/juce_data_structures.cpp.o
+[72/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_audio_basics/juce_audio_basics.cpp.o
+[73/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_audio_devices/juce_audio_devices.cpp.o
+[74/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_core/juce_core.cpp.o
+[75/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+[76/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_audio_formats/juce_audio_formats.cpp.o
+[77/78] Building CXX object CMakeFiles/VocalSweetPluginTests.dir/opt/src/juce-8.0.4/modules/juce_dsp/juce_dsp.cpp.o
+[78/78] Linking CXX executable VocalSweetPluginTests_artefacts/Release/VocalSweetPluginTests
+Test project /opt/build/vs-linux
+    Start 1: dsp
+1/2 Test #1: dsp ..............................   Passed   20.90 sec
+    Start 2: plugin
+2/2 Test #2: plugin ...........................   Passed    1.62 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =  22.52 sec
+VS_EXIT=0

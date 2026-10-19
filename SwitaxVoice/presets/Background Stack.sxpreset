@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SwitaxVoicePreset name="Background Stack" version="1" inputGain="0.0" hpfOn="1.0"
+                   hpfFreq="150.0" hpfSlope="1.0" eqOn="1.0" lowFreq="300.0" lowGain="-4.0"
+                   boxFreq="800.0" boxGain="-2.0" harshFreq="3200.0" harshGain="0.0"
+                   presFreq="4000.0" presGain="-1.5" airFreq="11000.0" airGain="2.0"
+                   compOn="1.0" compThresh="-28.0" compRatio="3.5" compAttack="12.0"
+                   compRelease="200.0" compMakeup="0.0" compAuto="1.0" deessOn="1.0"
+                   deessFreq="6500.0" deessThresh="-38.0" deessRange="10.0" satOn="1.0"
+                   satDrive="20.0" exciteOn="0.0" exciteFreq="5000.0" exciteAmount="15.0"
+                   doubleOn="1.0" doubleAmount="40.0" doubleWidth="85.0" outputGain="-3.0"
+                   limiterOn="1.0" ceiling="-1.0" mix="100.0"/>

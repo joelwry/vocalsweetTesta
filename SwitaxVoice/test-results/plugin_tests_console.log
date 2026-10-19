@@ -1,0 +1,30 @@
+SwitaxVoice plugin test-suite
+=============================
+[PASS] All parameters registered with stable host IDs             39 / 39 parameters
+[PASS] Parameter defaults match the specification                 all defaults verified
+[PASS] Parameter value text for automation lanes                  80 Hz, -18.0 dB
+[PASS] Bus layouts: mono/stereo, optional mono/stereo sidechain; others rejected mono->mono, stereo->stereo, sidechain off/mono/stereo
+[PASS] Host bypass parameter exposed                              getBypassParameter() == 'bypass'
+[PASS] processBlock: 3 rates x 3 block sizes x mono/stereo        finite, peak <= -1 dBFS, 1 ms latency reported
+[PASS] Randomly varying host block sizes (1..3000)                63 processBlock calls, all finite
+[PASS] Host bypass (processBlockBypassed) = latency-aligned dry   max |error| 0.00e+00
+[PASS] Audition changes the sound but not the parameters          audition output -12.00 dB, parameters unchanged
+[PASS] A/B compare = unprocessed input with level-match gain      -4.00 dB
+[PASS] Accepting a proposal = host-visible, undoable parameter gestures 3 parameter changes, 3 gestures
+[PASS] State save -> restore (parameters, preset name, Assist settings) 1647 bytes, 0 mismatches
+[PASS] Corrupt / empty state ignored safely                       defaults retained
+[PASS] Factory presets load exact values via host programs        Clean Start, Afrobeat Lead, Afrofusion Lead, Amapiano Vocal, Melodic Rap, Afro-Pop Bright, Background Stack, Ad-lib Spice, Analysis Only
+[PASS] User preset save / load / delete (.sxpreset)               saved to /root/.config/SwitaxVoice/Presets/zz UnitTest Preset.sxpreset
+[PASS] Fast host automation (EQ, threshold, switches) is click-free max sample step 0.0227 (limit 0.0393)
+[PASS] Live BS.1770 meters through the plugin: -23 dBFS stereo 1 kHz -> -23 LUFS in & out in -22.99, out -22.99 LUFS, dropped 0
+[PASS] Sidechain bus reaches the analyser                         sidechain short-term -15.6 LUFS
+[PASS] LEARN end-to-end: capture through processBlock -> background analysis -> report 6 proposals and 1 note against Afrobeat Lead. [lowend,deess,lowmid,box,air,comp,noise]
+[PASS] Audio thread stays fast while the advisor runs             worst processBlock 0.686 ms (512-sample block = 10.7 ms)
+[PASS] Editor opens at 1180 x 760                                 1180 x 760
+[PASS] Assist page shows one card per recommendation              7 cards
+[PASS] Card: audition (params untouched), accept at 50 % amount, undo restores 'Low-frequency hum or rumble': High-pass just below the lowest note.  [HPF Frequency 70 Hz -> 140 Hz] | audition 1 changed 1 halfway 1 undone 1
+[PASS] Card: reject marks it without touching parameters          rejected
+[PASS] Editor snapshots rendered (real editor, live audio)        /opt/build/sx-linux/test-output/editor-snapshots
+[PASS] Factory presets exported as .sxpreset files                /opt/build/sx-linux/test-output/presets
+
+26 tests, 0 failed

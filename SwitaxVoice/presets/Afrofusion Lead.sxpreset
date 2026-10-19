@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SwitaxVoicePreset name="Afrofusion Lead" version="1" inputGain="0.0" hpfOn="1.0"
+                   hpfFreq="80.0" hpfSlope="0.0" eqOn="1.0" lowFreq="260.0" lowGain="-1.0"
+                   boxFreq="700.0" boxGain="-1.0" harshFreq="3200.0" harshGain="0.0"
+                   presFreq="3200.0" presGain="1.0" airFreq="12500.0" airGain="3.0"
+                   compOn="1.0" compThresh="-24.0" compRatio="2.599999904632568"
+                   compAttack="10.0" compRelease="140.0" compMakeup="0.0" compAuto="1.0"
+                   deessOn="1.0" deessFreq="6500.0" deessThresh="-32.0" deessRange="7.0"
+                   satOn="1.0" satDrive="24.0" exciteOn="0.0" exciteFreq="5000.0"
+                   exciteAmount="15.0" doubleOn="0.0" doubleAmount="40.0" doubleWidth="70.0"
+                   outputGain="0.0" limiterOn="1.0" ceiling="-1.0" mix="100.0"/>

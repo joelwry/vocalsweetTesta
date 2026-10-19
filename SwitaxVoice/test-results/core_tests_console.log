@@ -1,0 +1,53 @@
+[PASS] EBU 3341 case 1: -23 dBFS sine -> -23.0 LUFS (M, S, I)     I -22.993, M -22.993, S -22.993
+[PASS] EBU 3341 case 2: -33 dBFS sine -> -33.0 LUFS               I -32.993
+[PASS] EBU 3341 case 3: relative gate (-36/-23/-36) -> -23.0      I -23.014
+[PASS] EBU 3341 case 4: absolute + relative gate -> -23.0         I -23.014
+[PASS] EBU 3342 LRA: -20 / -30 dBFS -> 10 LU                      LRA 10.00 LU
+[PASS] EBU 3342 LRA: -20 / -15 dBFS -> 5 LU                       LRA 5.00 LU
+[PASS] EBU 3342 LRA: -40 / -20 dBFS -> 20 LU                      LRA 20.00 LU
+[PASS] Loudness at 22.05-192 kHz within 0.1 LU                    22050:-22.96 44100:-22.99 88200:-23.01 96000:-23.01 192000:-23.02 
+[PASS] Mono channel (G = 1.0): -20 dBFS sine -> -23.0 LUFS        I -23.004
+[PASS] K-weighting response (1 kHz +0.7 dB, 10 kHz +4.0 dB, 30 Hz < -6 dB) 0.698, 4.042, -8.304 dB
+[PASS] True peak: fs/4 sine at 45 deg (sample peak -3.01 dB) -> 0 dBTP sample -3.01 dB, true -0.05 dBTP
+[PASS] True peak: 997 Hz sine at -6 dBFS -> -6.0 dBTP             -6.000 dBTP
+[PASS] Spectrum: pink noise (Kellet approximation) flat within +/-2 dB, 63 Hz-16 kHz spread 3.34 dB
+[PASS] Spectrum calibration: band sum = 20 Hz-20 kHz share of mean square bands -11.43 dB, expected -11.33 dB
+[PASS] Spectrum: 0 dBFS 1 kHz sine -> -3.01 dB in its band        -3.04 dB at 959 Hz band
+[PASS] Pitch (YIN): harmonic tones 98-660 Hz within 1 %           98->98.0 196->196.0 440->440.2 660->660.4 
+[PASS] Pitch (YIN): white noise is reported unvoiced              voiced 0 %
+[PASS] Activity gating: 5 s tone + 5 s silence -> 5 s active      5.00 s
+[PASS] Clipping: hard-clipped sine detected, clean -0.5 dBFS sine not clipped 880 runs, clean 0
+[PASS] Clipping: flat tops below full scale (pre-gain clipping) detected 880 flat-top runs
+[PASS] Stereo correlation: identical +1, inverted -1, independent ~0 1.000 / -1.000 / -0.002, inverted mono loss -200 dB
+[PASS] Sibilance: strong 's' bursts detected; none when absent    10 events with, 0 without
+[PASS] Sibilance: tonal balance excludes sibilant frames          36 frames skipped (with), 0 (without)
+[PASS] Chain latency = 1 ms look-ahead                            48 samples
+[PASS] Chain: silence in -> silence out (below -180 dBFS)         peak 3.82e-18
+[PASS] Chain: block size 512 vs 37 identical output               max diff 0.00e+00
+[PASS] Chain: bypass is bit-exact (latency compensated)           all samples identical
+[PASS] Chain: level-matched compare gain on the bypass path       -6.00 dB
+[PASS] Chain: EQ display curve matches measured response          max error 0.000 dB
+[PASS] Chain: 60 random parameter sets + NaN/Inf input stay finite all outputs finite
+[PASS] Chain CPU (stereo 48 kHz, all modules): < 10 % of one core 5.05 % of real time
+[PASS] Advisor: silence -> no recommendations, explains why       Only 0.0 s of signal was captured. Play at least 5 seconds of the part and try again.
+[PASS] Advisor: clean voice vs its own reference -> no recommendations (no false positives) none
+[PASS] Advisor: +8 dB mud at 300 Hz -> low-mid cut near 300 Hz, at most 4 dB 300 Hz, -4.0 dB; 150 Hz-500 Hz versus target: +4.5 dB -> +2.1 dB (all tone proposals applied).
+[PASS] Advisor: +9 dB resonance at 3.2 kHz -> harsh cut near 3.2 kHz 3400 Hz, -4.0 dB
+[PASS] Advisor: rumble -> high-pass below the lowest sung note    HPF 140 Hz (lowest note 196 Hz)
+[PASS] Advisor: strong sibilance -> de-esser proposal with simulated reduction Sibilant peaks relative to the body: +7.3 dB -> +0.8 dB. / High end between sibilants changes by +0.0 dB (kept above -2 dB so vowels stay open).
+[PASS] Advisor: +/-7 dB phrase swings -> compression, bounded gain reduction Momentary loudness range 16.6 dB -> 9.5 dB. / Average gain reduction while singing 0.0 dB -> 5.9 dB.
+[PASS] Advisor: heavily limited source -> no extra compression proposed lowmid,box,air,level
+[PASS] Advisor: clipped recording -> clipping note (information only, no parameter changes) 96 runs of 3+ consecutive samples at full scale (>= -0.004 dBFS); first at 0:02.02, 0:02.02, 0:02.02, 0:02.02, 0:02.03, 0:02.03.
+[PASS] Advisor: polarity-inverted stereo -> mono-compatibility warning lowend,harsh,airx,stereo
+[PASS] Advisor: full-mix context -> no vocal processing changes, offers analysis-only mode mixonly,mixtone,mixloud
+[PASS] Advisor: sidechain beat -> vocal-vs-beat level check uses it beat
+[PASS] Advisor: applying the plan reduces the total deviation from the target sum |dev| 65 -> 41 dB
+[PASS] Advisor bounds (8 random voices x 6 targets): cuts <= 4 dB, boosts <= 3 dB, GR <= 6.5 dB 48 analyses within bounds
+[PASS] Real voice: sung take vs its own reference -> no recommendations none
+[PASS] Real voice: +7 dB at 300 Hz injected -> found within 1/3 octave 300 Hz
+[PASS] Real voice: +8 dB at 3.5 kHz injected -> found within 1/3 octave 3400 Hz
+[PASS] Real voice: speech has real sibilants detected, not flagged as excessive 26 events, air,comp,gain,box,presence,level
+[PASS] Real voice: sung take vs Afrobeat house target -> bounded proposals box,air,comp,level
+
+50 tests, 0 failures, 399.1 s
+EXIT=0

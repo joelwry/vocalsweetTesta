@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SwitaxVoicePreset name="Amapiano Vocal" version="1" inputGain="0.0" hpfOn="1.0"
+                   hpfFreq="120.0" hpfSlope="1.0" eqOn="1.0" lowFreq="300.0" lowGain="-2.5"
+                   boxFreq="800.0" boxGain="-1.0" harshFreq="3200.0" harshGain="0.0"
+                   presFreq="3500.0" presGain="1.0" airFreq="10500.0" airGain="4.0"
+                   compOn="1.0" compThresh="-24.0" compRatio="2.799999952316284"
+                   compAttack="12.0" compRelease="160.0" compMakeup="0.0" compAuto="1.0"
+                   deessOn="1.0" deessFreq="7000.0" deessThresh="-34.0" deessRange="8.0"
+                   satOn="1.0" satDrive="12.0" exciteOn="1.0" exciteFreq="6000.0"
+                   exciteAmount="15.0" doubleOn="0.0" doubleAmount="40.0" doubleWidth="70.0"
+                   outputGain="0.0" limiterOn="1.0" ceiling="-1.0" mix="100.0"/>

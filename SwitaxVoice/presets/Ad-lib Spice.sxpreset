@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SwitaxVoicePreset name="Ad-lib Spice" version="1" inputGain="0.0" hpfOn="1.0" hpfFreq="200.0"
+                   hpfSlope="1.0" eqOn="1.0" lowFreq="400.0" lowGain="-3.0" boxFreq="800.0"
+                   boxGain="0.0" harshFreq="3200.0" harshGain="0.0" presFreq="2500.0"
+                   presGain="4.0" airFreq="11000.0" airGain="-2.0" compOn="1.0"
+                   compThresh="-28.0" compRatio="5.0" compAttack="2.0" compRelease="60.0"
+                   compMakeup="0.0" compAuto="1.0" deessOn="1.0" deessFreq="6500.0"
+                   deessThresh="-30.0" deessRange="6.0" satOn="1.0" satDrive="55.0"
+                   exciteOn="0.0" exciteFreq="5000.0" exciteAmount="15.0" doubleOn="1.0"
+                   doubleAmount="60.0" doubleWidth="100.0" outputGain="-4.0" limiterOn="1.0"
+                   ceiling="-1.0" mix="100.0"/>
