@@ -1,4 +1,4 @@
-# SwitaxVoice 1.0.0 test report (2026-10-19)
+# SwitaxVoice 1.0.1 test report (2026-10-23; 1.0.0 was 2026-10-19)
 
 ## What was built
 | Target | Toolchain | Result |
@@ -12,7 +12,7 @@
 | Suite | Result | Log |
 |---|---|---|
 | Core tests (`SwitaxCoreTests`) | **50 / 50 passed** (399 s) | `test-results/core_test_report.md`, `core_tests_console.log` |
-| Plugin tests (`SwitaxPluginTests`) | **26 / 26 passed** | `test-results/plugin_test_report.md`, `plugin_tests_console.log` |
+| Plugin tests (`SwitaxPluginTests`) | **33 / 33 passed** | `test-results/plugin_test_report.md`, `plugin_tests_console.log` |
 | pluginval 1.0.4, Linux VST3, strictness 10, **with GUI tests** (Xvfb) | **SUCCESS**, 25 test groups | `pluginval_linux_x64_vst3_strict10_with_gui.log` |
 | pluginval 1.0.4 (Windows build), **Windows DLL under Wine**, strictness 10, `--skip-gui-tests` | **SUCCESS**, 21 test groups | `pluginval_windows_x64_vst3_under_wine_strict10_nogui.log` |
 | Real recordings (VocalSet, CC BY 4.0) | 5 / 5 checks pass, with a full report | `real_recordings_report.md` |

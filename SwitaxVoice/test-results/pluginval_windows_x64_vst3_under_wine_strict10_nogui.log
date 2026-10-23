@@ -1,8 +1,5 @@
-wine: created the configuration directory '/root/.wine'
-wine: failed to open L"C:\\windows\\syswow64\\rundll32.exe": c0000135
-wine: configuration in L"/root/.wine" has been updated.
 Started validating: Z:\opt\build\sx-win\SwitaxVoice_artefacts\Release\VST3\SwitaxVoice.vst3
-Random seed: 0x659541b
+Random seed: 0x6e5c385
 Validation started
 Strictness level: 10
 -----------------------------------------------------------------
@@ -10,7 +7,7 @@ Starting tests in: pluginval / Scan for plugins located in: Z:\opt\build\sx-win\
 Num plugins found: 1
 
 Testing plugin: VST3-SwitaxVoice-ae16dfd4-bd578243
-Switax Audio: SwitaxVoice v1.0.0
+Switax Audio: SwitaxVoice v1.0.1
 Completed tests in pluginval / Scan for plugins located in: Z:\opt\build\sx-win\SwitaxVoice_artefacts\Release\VST3\SwitaxVoice.vst3
 -----------------------------------------------------------------
 Starting tests in: pluginval / Open plugin (cold)...
@@ -141,5 +138,3 @@ Starting tests in: pluginval / Fuzz parameters...
 Completed tests in pluginval / Fuzz parameters
 SUCCESS
 X connection to :99 broken (explicit kill or server shutdown).
-X connection to :99 broken (explicit kill or server shutdown).
-PVW_EXIT=0

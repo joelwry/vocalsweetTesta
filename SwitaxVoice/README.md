@@ -8,7 +8,8 @@ It is built on the VocalSweet engine (VocalSweet itself is untouched and keeps w
   **sidechain** ("Beat") input used for analysis only.
 * Latency: 1 ms (look-ahead limiter), reported to the host. CPU about 4-5 % of one core
   (stereo 48 kHz, every module on; measured).
-* Window 1180 × 760, freely resizable (fixed aspect).
+* Window opens **sized to fit your screen** (design size 1180 × 760, scalable 50 %-200 %). Resize by dragging the
+  right edge, bottom edge or bottom-right grip, or with the Size menu; the size is saved in the project.
 
 ![Assist page](screenshots/01_assist_report.png)
 

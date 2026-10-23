@@ -5,7 +5,7 @@ runtime is statically linked). SwitaxVoice installs **next to** VocalSweet; it h
 ID, so it does not replace or affect your working VocalSweet.
 
 ## 1. Install
-1. Right-click `SwitaxVoice_v1.0.0_Windows_x64.zip` → **Properties** → tick **Unblock** → OK
+1. Right-click `SwitaxVoice_v1.0.1_Windows_x64.zip` → **Properties** → tick **Unblock** → OK
    (the plugin is not code-signed).
 2. Extract it, then copy the whole **`SwitaxVoice.vst3` folder** to
    `C:\Program Files\Common Files\VST3\`.
@@ -13,7 +13,19 @@ ID, so it does not replace or affect your working VocalSweet.
    * **FL Studio:** Options → Manage plugins → *Find installed plugins*. Favourite **SwitaxVoice**.
    * **Audacity 3.2+:** Effect → Plugin Manager → Rescan, enable SwitaxVoice.
 
-## 2. First session (Assist)
+## 2. Window size and moving the window
+The plugin window is drawn by your DAW (title bar, close button, dragging), and SwitaxVoice now
+always opens **sized to fit your screen**, so that frame is never pushed off-screen.
+* **Resize:** drag the **right edge**, the **bottom edge** or the **bottom-right corner grip** of
+  the plugin (the cursor changes). Double-click the grip to fit the screen. The window keeps its
+  proportions, from 50 % up to the largest size that fits your screen.
+* **Size menu:** top bar, left of the preset box: *Fit to screen, 60, 75, 100, 125, 150, 200 %*.
+* The size is remembered in your project.
+* **Move / close:** use your DAW's window title bar and close button (the plugin cannot draw
+  those). If a window ever gets stuck over the DAW, FL Studio's **F12** shortcut closes all open
+  windows (check your version's shortcut list if it differs).
+
+## 3. First session (Assist)
 1. Insert SwitaxVoice on the **vocal track** (insert slot, not the master).
 2. Assist page → **What is on this track?** Pick *Isolated vocal* (or *Vocal with bleed* / *Vocal bus*).
 3. **Compare with:** a style (Afrobeat Lead, Afrofusion, Amapiano, Melodic Rap, Afro-Pop Bright,
@@ -27,14 +39,14 @@ ID, so it does not replace or affect your working VocalSweet.
    DAW's undo and automation see them too.
 6. **A/B** (top bar) plays the unprocessed input level-matched to the output, so louder ≠ better.
 
-## 3. Optional: let SwitaxVoice hear the beat (sidechain)
+## 4. Optional: let SwitaxVoice hear the beat (sidechain)
 * **FL Studio:** route the beat's mixer track to the vocal track as a **sidechain** (right-click the
   send arrow → *Sidechain to this track*). In the SwitaxVoice wrapper settings
   (*Processing* → input ports), map the sidechain to input 3-4. The right rail then shows
   "Sidechain: … LUFS" and the next LEARN adds vocal-vs-beat checks.
 * Without a sidechain, SwitaxVoice does not know anything about your beat and will say so.
 
-## 4. Channel page
+## 5. Channel page
 Every module is adjustable: HPF, 5-band tone EQ (low-mid, box, harsh, presence, air), compressor,
 de-esser, saturation, exciter, doubler and output (input/output gain, dry/wet, ceiling, limiter).
 Highlighted knobs show what an auditioned card would change.

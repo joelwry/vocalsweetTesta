@@ -69,6 +69,9 @@ public:
     /** Applies a full set of values as one undoable host gesture per parameter. */
     void applyValues (const sx::ParamValues& values);
 
+    /** Editor size as a fraction of the design size (0 = not chosen yet). Saved in the state. */
+    std::atomic<float> uiScale { 0.0f };
+
     // Assist settings (stored in the plugin state)
     AnalysisEngine::AssistSettings assist;
 

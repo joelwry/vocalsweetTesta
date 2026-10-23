@@ -15,6 +15,11 @@
   calibrated probability.
 * No Windows `moduleinfo.json` (VST3 manifest). It is optional; hosts scan the DLL.
 
+* **Window frame:** moving, minimising, maximising and closing the plugin window are done by the
+  DAW's own frame; a VST3 plugin does not draw those. The plugin now opens at a size that fits
+  the screen and has its own resize handles, but how each DAW treats resize requests (and whether
+  it draws a maximise button) is up to the DAW. Verified here only in the test host.
+
 ## Design limitations
 * **No pitch correction yet** (see RESEARCH.md: the QPitch/Rubber Band option and its risks).
 * Analysis needs a LEARN pass: proposals do not update continuously while you sing.

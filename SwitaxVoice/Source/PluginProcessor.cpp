@@ -210,6 +210,7 @@ void SwitaxVoiceAudioProcessor::getStateInformation (juce::MemoryBlock& destData
     state.setProperty ("assistContext", (int) assist.context, nullptr);
     state.setProperty ("assistTarget", assist.genre, nullptr);
     state.setProperty ("assistSeconds", assist.captureSeconds, nullptr);
+    state.setProperty ("uiScale", (double) uiScale.load(), nullptr);
     state.setProperty ("referenceFile", analysis.getReferenceFile().getFullPathName(), nullptr);
     if (auto xml = state.createXml())
         copyXmlToBinary (*xml, destData);
@@ -237,6 +238,7 @@ void SwitaxVoiceAudioProcessor::setStateInformation (const void* data, int sizeI
                                                             (int) tree.getProperty ("assistContext", 0));
     assist.genre = juce::jlimit (-1, (int) sx::analysis::Genre::kNumGenres - 1, (int) tree.getProperty ("assistTarget", 0));
     assist.captureSeconds = juce::jlimit (5.0, 60.0, (double) tree.getProperty ("assistSeconds", 20.0));
+    uiScale.store ((float) juce::jlimit (0.0, 2.0, (double) tree.getProperty ("uiScale", 0.0)));
     const juce::String ref = tree.getProperty ("referenceFile").toString();
     if (ref.isNotEmpty() && juce::File::isAbsolutePath (ref) && juce::File (ref).existsAsFile())
     {

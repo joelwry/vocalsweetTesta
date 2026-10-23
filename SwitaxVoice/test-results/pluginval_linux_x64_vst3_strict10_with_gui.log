@@ -1,5 +1,5 @@
 Started validating: /opt/build/sx-linux/SwitaxVoice_artefacts/Release/VST3/SwitaxVoice.vst3
-Random seed: 0x204eeeb
+Random seed: 0x7f7dfc3
 Validation started
 Strictness level: 10
 -----------------------------------------------------------------
@@ -7,7 +7,7 @@ Starting tests in: pluginval / Scan for plugins located in: /opt/build/sx-linux/
 Num plugins found: 1
 
 Testing plugin: VST3-SwitaxVoice-d3561975-bd578243
-Switax Audio: SwitaxVoice v1.0.0
+Switax Audio: SwitaxVoice v1.0.1
 Completed tests in pluginval / Scan for plugins located in: /opt/build/sx-linux/SwitaxVoice_artefacts/Release/VST3/SwitaxVoice.vst3
 -----------------------------------------------------------------
 Starting tests in: pluginval / Open plugin (cold)...
@@ -149,4 +149,3 @@ Completed tests in pluginval / Restoring default layout
 Starting tests in: pluginval / Fuzz parameters...
 Completed tests in pluginval / Fuzz parameters
 SUCCESS
-PV_EXIT=0
